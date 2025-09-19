@@ -2,39 +2,74 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Saforia Marketics Premium Design System - All colors MUST be HSL */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Core Brand Colors */
+    --background: 210 25% 98%;
+    --foreground: 217 33% 17%;
+    
+    /* Deep Blue (Primary Brand) */
+    --primary: 217 91% 15%;
+    --primary-foreground: 210 25% 98%;
+    --primary-light: 217 91% 25%;
+    --primary-dark: 217 91% 8%;
+    
+    /* Emerald (Growth & Success) */
+    --emerald: 158 64% 52%;
+    --emerald-foreground: 210 25% 98%;
+    --emerald-light: 158 64% 62%;
+    --emerald-dark: 158 64% 42%;
+    
+    /* Gold (Premium Accents) */
+    --gold: 45 90% 58%;
+    --gold-foreground: 217 33% 17%;
+    --gold-light: 45 90% 68%;
+    --gold-dark: 45 90% 48%;
+    
+    /* Neon Purple (Technology) */
+    --neon-purple: 270 100% 70%;
+    --neon-purple-foreground: 210 25% 98%;
+    --neon-purple-light: 270 100% 80%;
+    --neon-purple-dark: 270 100% 60%;
+    
+    /* Neutral Palette */
+    --card: 210 25% 98%;
+    --card-foreground: 217 33% 17%;
+    --card-premium: 217 91% 8%;
+    --card-premium-foreground: 210 25% 98%;
+    
+    --muted: 210 15% 94%;
+    --muted-foreground: 217 20% 45%;
+    
+    --secondary: 210 15% 90%;
+    --secondary-foreground: 217 33% 17%;
+    
+    /* Premium Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 15%), hsl(217 91% 8%));
+    --gradient-premium: linear-gradient(135deg, hsl(217 91% 8%), hsl(270 100% 60%));
+    --gradient-success: linear-gradient(135deg, hsl(158 64% 52%), hsl(158 64% 42%));
+    --gradient-gold: linear-gradient(135deg, hsl(45 90% 58%), hsl(45 90% 48%));
+    
+    /* Shadows & Effects */
+    --shadow-premium: 0 20px 60px -10px hsl(217 91% 15% / 0.3);
+    --shadow-card: 0 4px 20px hsl(217 20% 40% / 0.1);
+    --shadow-glow: 0 0 40px hsl(270 100% 70% / 0.4);
+    --shadow-gold: 0 8px 32px hsl(45 90% 58% / 0.3);
+    
+    /* Borders & Interactions */
+    --border: 210 15% 88%;
+    --input: 210 15% 88%;
+    --ring: 217 91% 15%;
+    
+    /* Utility Colors */
+    --accent: 158 64% 52%;
+    --accent-foreground: 210 25% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 25% 98%;
+    --popover: 210 25% 98%;
+    --popover-foreground: 217 33% 17%;
 
     --radius: 0.5rem;
 
@@ -56,41 +91,32 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Dark mode adaptations - maintaining brand integrity */
+    --background: 217 91% 8%;
+    --foreground: 210 25% 98%;
+    
+    --card: 217 91% 12%;
+    --card-foreground: 210 25% 98%;
+    --card-premium: 217 91% 6%;
+    
+    --muted: 217 50% 15%;
+    --muted-foreground: 210 15% 70%;
+    
+    --secondary: 217 50% 18%;
+    --secondary-foreground: 210 25% 98%;
+    
+    --border: 217 50% 20%;
+    --input: 217 50% 20%;
+    --ring: 158 64% 52%;
+    
+    /* Enhanced gradients for dark mode */
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 12%), hsl(217 91% 6%));
+    --gradient-premium: linear-gradient(135deg, hsl(217 91% 6%), hsl(270 100% 50%));
+    
+    /* Adjusted shadows for dark mode */
+    --shadow-premium: 0 20px 60px -10px hsl(0 0% 0% / 0.5);
+    --shadow-card: 0 4px 20px hsl(0 0% 0% / 0.3);
+    --shadow-glow: 0 0 40px hsl(270 100% 70% / 0.6);
   }
 }
 
@@ -100,6 +126,95 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold leading-tight tracking-tight;
+  }
+  
+  /* Premium Typography Classes */
+  .text-hero {
+    @apply text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-white to-emerald-light bg-clip-text text-transparent;
+  }
+  
+  .text-subtitle {
+    @apply text-xl md:text-2xl text-muted-foreground font-light leading-relaxed;
+  }
+  
+  .text-premium {
+    @apply bg-gradient-to-r from-gold to-gold-light bg-clip-text text-transparent font-semibold;
+  }
+}
+
+@layer components {
+  /* Premium Animations */
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+  }
+  
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  /* Hover Effects */
+  .hover-lift {
+    @apply transition-all duration-300 ease-out;
+  }
+  
+  .hover-lift:hover {
+    @apply -translate-y-2 shadow-2xl;
+  }
+  
+  .hover-glow:hover {
+    @apply shadow-[0_0_30px_hsl(var(--neon-purple)/0.5)];
+  }
+  
+  /* Premium Card Styles */
+  .card-premium {
+    @apply bg-gradient-to-br from-card-premium via-card-premium to-primary-dark text-card-premium-foreground;
+    box-shadow: var(--shadow-premium);
+  }
+  
+  .card-service {
+    @apply bg-card/50 backdrop-blur-sm border border-border/50 transition-all duration-300;
+  }
+  
+  .card-service:hover {
+    @apply bg-card border-gold/30 scale-105;
+    box-shadow: var(--shadow-gold);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(var(--neon-purple) / 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px hsl(var(--neon-purple) / 0.8);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }

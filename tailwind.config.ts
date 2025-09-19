@@ -22,10 +22,30 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          light: "hsl(var(--primary-light))",
+          dark: "hsl(var(--primary-dark))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+        },
+        emerald: {
+          DEFAULT: "hsl(var(--emerald))",
+          foreground: "hsl(var(--emerald-foreground))",
+          light: "hsl(var(--emerald-light))",
+          dark: "hsl(var(--emerald-dark))",
+        },
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
+          foreground: "hsl(var(--gold-foreground))",
+          light: "hsl(var(--gold-light))",
+          dark: "hsl(var(--gold-dark))",
+        },
+        "neon-purple": {
+          DEFAULT: "hsl(var(--neon-purple))",
+          foreground: "hsl(var(--neon-purple-foreground))",
+          light: "hsl(var(--neon-purple-light))",
+          dark: "hsl(var(--neon-purple-dark))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -46,17 +66,21 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+          premium: "hsl(var(--card-premium))",
+          "premium-foreground": "hsl(var(--card-premium-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
-        },
+      },
+      backgroundImage: {
+        "gradient-hero": "var(--gradient-hero)",
+        "gradient-premium": "var(--gradient-premium)", 
+        "gradient-success": "var(--gradient-success)",
+        "gradient-gold": "var(--gradient-gold)",
+      },
+      boxShadow: {
+        "premium": "var(--shadow-premium)",
+        "card": "var(--shadow-card)",
+        "glow": "var(--shadow-glow)",
+        "gold": "var(--shadow-gold)",
       },
       borderRadius: {
         lg: "var(--radius)",
